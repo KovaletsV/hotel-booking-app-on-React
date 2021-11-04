@@ -7,12 +7,14 @@
     box-sizing: border-box;
 }
 body {
-    /* background-color: rgb(244, 248, 252); */
     font-family: "Roboto", sans-serif;
     height: 100%;
 }
-a {
+.link {
     text-decoration: none;
+}
+.list {
+    list-style: none;
 }
 .header {
     height: 50px;
@@ -29,10 +31,14 @@ a {
     padding-top: 15px;
 }
 .navigation {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    flex: 3;
+    background-color: rgb(7, 4, 46);
+    line-height: 66px;
 }
 .logo {
     display: flex;
@@ -48,8 +54,9 @@ a {
 }
 .navigation a {
     cursor: pointer;
-    color: rgb(245, 245, 245);
+    color: #fff;
     font-size: 16px;
+    font-weight: 600;
     letter-spacing: 1px;
 }
 .navigation a:hover {
@@ -66,7 +73,7 @@ a {
 .booking_button {
     position: absolute;
     top: 65%;
-    background-color: rgb(77, 186, 230);
+    background-color: rgb(7, 4, 46);
     padding: 10px 30px;
     border-radius: 10px;
 }
@@ -79,6 +86,9 @@ a {
 }
 
 /*Information block*/
+.wrapper_info {
+    background-color: rgb(5, 34, 71);
+}
 
 .information {
     max-width: 1280px;
@@ -91,26 +101,42 @@ a {
     text-align: center;
 }
 .info-block {
-    padding: 10px 10px;
+    padding: 10px 20px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin: 0 10px;
+    margin: 0;
 }
 .info-text {
     letter-spacing: 1px;
     font-family: "Poppins", sans-serif;
+    color: #fff;
 }
 .info-img {
-    background-image: url("../images/img2.jpg");
     background-repeat: no-repeat;
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     background-position: center center;
+    background-size: cover;
+}
+.info-img1 {
+    background-image: url("../images/spa.jpg");
+}
+.info-img2 {
+    background-image: url("../images/diving.jpg");
+    background-position: cover;
+}
+.info-img3 {
+    background-image: url("../images/rest.jpg");
     background-size: cover;
 }
 .block2 {
     display: flex;
     flex-direction: column-reverse;
+}
+.page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 70px;
 }
